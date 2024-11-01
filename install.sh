@@ -130,7 +130,8 @@ install_dependencies() {
 install_hyperglass() {
     echo "[INFO] Installing hyperglass..."
 
-    curl -sSL https://install.python-poetry.org | POETRY_HOME=/opt/poetry python3 -
+    # Instalando o poetry corretamente
+    curl -sSL https://install.python-poetry.org | python3 -
     export PATH="/opt/poetry/bin:$PATH"
 
     [ -d "/tmp/hyperglass" ] && rm -rf /tmp/hyperglass
